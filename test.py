@@ -7,6 +7,10 @@ def out():
 def enter():
     enterTime={"Enter":datetime.now()}
     return enterTime
+def show():
+    op=open("log.txt")
+    s=op.read()
+    print(s)
 
 
 
@@ -17,5 +21,6 @@ while True:
     name = input ("Whats your name : ")
     o.write("name: " + name)
     if command == "1" or command == 1 : o.write(enter())
+    elif command=="r":show()
     else : o.write(out())
     o.close()
